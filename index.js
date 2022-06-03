@@ -4,6 +4,8 @@ const btn = document
   .getElementById("diceImgContainer")
   .addEventListener("click", getData);
 
+window.addEventListener("load", getData);
+
 function getData() {
   fetch("https://api.adviceslip.com/advice", { cache: "no-cache" })
     .then((response) => response.json())
